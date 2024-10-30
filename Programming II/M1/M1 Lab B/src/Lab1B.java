@@ -1,4 +1,5 @@
 import java.io.*;
+import java.util.Scanner;
 
 class Palindrome {
 
@@ -33,16 +34,30 @@ class Palindrome {
         // Prompt the user for a string. a. Your code goes here
 
         String myString;
+        
+        System.out.println("Enter a string: ");
+        Scanner input = new Scanner(System.in);
+        myString = input.nextLine();
 
         // Convert the input string to lowercase using toLowerCase() method.
 
         // b. Your code goes here
 
+        myString = myString.toLowerCase();
+
         // Invoke isPalindrome
 
         // c. Your code goes here.
 
- 
+        if (Palindrome.isPalindrome(myString)) {
+
+            System.out.println(myString + " is a palindrome.");
+
+        } else {
+
+            System.out.println(myString + " is not a palindrome.");
+
+        }
 
         // display if the string is or is not a palindrome.
 
